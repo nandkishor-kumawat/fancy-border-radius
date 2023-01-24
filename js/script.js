@@ -2,6 +2,7 @@ let selecters = document.querySelectorAll('.selecter');
 let shape = $$('#shape')
 let box = $$('#box')
 let points = 4;
+
 selecters.forEach(el => {
     el.addEventListener('mousedown', mouseD)
     el.addEventListener('touchstart', mouseD)
@@ -12,14 +13,9 @@ document.querySelectorAll('#dimension input').forEach(ele => {
 })
 
 $$('#pointChange').addEventListener('click', (e) => {
-    if(e.target.checked){
-        points = 8;
-
-    }else{
-        points = 4;
-    }
-    document.querySelectorAll('.selecter').forEach(el=>el.style.display='none')
-    document.querySelectorAll('.selecter.pt_'+points).forEach(el=>el.style.display='block')
+    points = e.target.checked ? 8 : 4;
+    document.querySelectorAll('.selecter').forEach(el => el.style.display = 'none')
+    document.querySelectorAll('.selecter.pt_' + points).forEach(el => el.style.display = 'block')
     setBorder()
 })
 
@@ -33,7 +29,7 @@ function mouseD() {
 }
 
 function mouseM() {
-    let e, vt, hz, w, h, l, r, b, t, bdr;
+    let e, vt, hz, w, h, bdr;
     e = event.type == "touchmove" ? event.touches[0] : event
     el = document.querySelector('.active')
 
@@ -90,7 +86,7 @@ function setBorder() {
 
     shape.style.borderRadius = bdr;
     $$('#code').innerText = bdr;
-}setBorder()
+} setBorder()
 
 
 function setSize() {
@@ -110,3 +106,5 @@ function $$(s) {
     return document.querySelector(s)
 }
 
+$$('#width').value = box.offsetWidth;
+$$('#height').value = box.offsetHeight;
