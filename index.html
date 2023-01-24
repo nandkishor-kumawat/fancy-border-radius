@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancy Border Radius</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <div class="main">
+        <header>
+            <h1 class="heading m-3">Fancy Border Radius</h1> 
+           4 <input type="checkbox" id="pointChange">8
+        </header>
+        <div class="box" id="box">
+            <div id="shape"></div>
+            <span class="selecter hr pt_4" id="top"></span>
+            <span class="selecter vt pt_4" id="right"></span>
+            <span class="selecter hr pt_4" id="bottom"></span>
+            <span class="selecter vt pt_4" id="left"></span>
+
+            <span class="selecter hr pt_8" id="topLeft"></span>
+            <span class="selecter hr pt_8" id="topRight"></span>
+            <span class="selecter vt pt_8" id="rightTop"></span>
+            <span class="selecter vt pt_8" id="rightBottom"></span>
+            <span class="selecter hr pt_8" id="bottomRight"></span>
+            <span class="selecter hr pt_8" id="bottomLeft"></span>
+            <span class="selecter vt pt_8" id="leftBottom"></span>
+            <span class="selecter vt pt_8" id="leftTop"></span>
+        </div>
+        <div>
+            <div class="output">
+                <div>border-radius:</div>
+                <div class="input-group">
+                    <span class="p-2" id="code">15% 85% 70% 30% / 30% 16% 84% 70% </span>
+                    <button class="p-2" id="copy">copy</button>
+                </div>
+            </div>
+            <div class="advanced">
+                <div class="advanced__switch">
+                    <input class="advanced__check" type="checkbox" id="customSize">
+                    <label class="advanced__trigger" for="customSize">Custom size:
+                        <span></span>
+                    </label>
+                </div>
+                <div class="advanced__settings" id="dimension">
+                    <div class="input-group">
+                        <label for="width">Width:</label>
+                        <input id="width" type="number" min="5" max="2000" value="300">
+                    </div>
+                    <div class="input-group">
+                        <label for="height">Height:</label>
+                        <input id="height" type="number" min="5" max="2000" value="300">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        Made with
+        <span class="footer__heart">💜</span> by
+        <a href="https://github.com/mirko314" target="_blank">Mirko</a> and
+        <a href="https://twitter.com/supremebeing09" target="_blank">Nils</a> @
+        <a href="https://9elements.com/" target="_blank">9elements</a> |
+        <a href="https://9elements.com/imprint" target="_blank">Imprint</a> |
+        <a href="https://9elements.com/privacy" target="_blank">Data Privacy</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
