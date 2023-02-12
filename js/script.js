@@ -29,14 +29,13 @@ function mouseD() {
 }
 
 function mouseM() {
-    let e, vt, hz, w, h, bdr;
-    e = event.type == "touchmove" ? event.touches[0] : event
-    el = document.querySelector('.active')
+    let e = event.type == "touchmove" ? event.touches[0] : event
+    let el = document.querySelector('.active')
 
-    vt = e.clientY - el.parentElement.offsetTop
-    hz = e.clientX - el.parentElement.offsetLeft
-    w = shape.offsetWidth
-    h = shape.offsetHeight
+    let vt = e.clientY - el.parentElement.offsetTop
+    let hz = e.clientX - el.parentElement.offsetLeft
+    let w = shape.offsetWidth
+    let h = shape.offsetHeight
     vt = vt < 0 ? 0 : vt
     vt = vt > h ? h : vt
     hz = hz < 0 ? 0 : hz
@@ -63,13 +62,14 @@ function mouseU() {
 
 
 function setBorder() {
-    w = shape.offsetWidth
-    h = shape.offsetHeight
+    let w = shape.offsetWidth
+    let h = shape.offsetHeight
+    let bdr
     if (points == 4) {
-        l = ($$('#left').offsetTop / h * 100).toFixed()
-        r = ($$('#right').offsetTop / h * 100).toFixed()
-        t = ($$('#top').offsetLeft / w * 100).toFixed()
-        b = ($$('#bottom').offsetLeft / w * 100).toFixed()
+        let l = ($$('#left').offsetTop / h * 100).toFixed()
+        let r = ($$('#right').offsetTop / h * 100).toFixed()
+        let t = ($$('#top').offsetLeft / w * 100).toFixed()
+        let b = ($$('#bottom').offsetLeft / w * 100).toFixed()
         bdr = `${t}% ${100 - t}% ${100 - b}% ${b}% / ${l}% ${r}% ${100 - r}%  ${100 - l}% `;
 
     } else {
