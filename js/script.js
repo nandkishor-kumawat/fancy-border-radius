@@ -29,6 +29,7 @@ function mouseD() {
 }
 
 function mouseM() {
+    event.preventDefault();
     let e = event.type == "touchmove" ? event.touches[0] : event
     let el = document.querySelector('.active')
 
