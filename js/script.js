@@ -20,6 +20,7 @@ $$('#pointChange').addEventListener('click', (e) => {
 })
 
 function mouseD() {
+    event.preventDefault();
     event.target.classList.add('active')
     document.addEventListener('mousemove', mouseM)
     document.addEventListener('mouseup', mouseU)
